@@ -1,0 +1,101 @@
+import random
+lista=list()
+while 1:
+    começo=input("Deseja Continuar? \n \n ~Sim ou Não~\n->").upper()
+    if começo == "SIM":
+        print("Seja bem vindo a Ferramenta auxiliar de RPG ( F.A.R)")
+        mainp=input("O quê deseja: \n(A)Jogar Dados \n(B) Calcular dano \n(C) Achar um nick criativo \n(D) Fechar Programa\n->").upper()
+        if mainp == "A":
+                name = input("Digite seu nome")
+                nvld=eval(input("Qual seu nivel?"))
+                if nvld== 1:
+                    dado = random.randrange(6)
+                    print(dado)
+                if nvld== 2:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    print("Sua soma de dados é", dado + dado2 )
+                if nvld== 3:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    dado3 = random.randrange(6)
+                    print("Sua soma de dados é", dado + dado2 + dado3 )
+                if nvld==4:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    dado3 = random.randrange(6)
+                    dado4 = random.randrange(6)
+                    print("Sua soma de dados é", dado + dado2 + dado3 + dado4 )
+                if nvld==5:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    dado3 = random.randrange(6)
+                    dado4 = random.randrange(6)
+                    dado5 = random.randrange(6)
+                    print("Sua soma de dados é", dado + dado2 + dado3 + dado4 + dado5)
+                if nvld==6:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    dado3 = random.randrange(6)
+                    dado4 = random.randrange(6)
+                    dado5 = random.randrange(6)
+                    dado6 = random.randrange(6)
+                    print("Sua soma de dados é",dado+dado2+dado3+dado4+dado5+dado6)
+                if nvld==7:
+                    dado = random.randrange(6)
+                    dado2 = random.randrange(6)
+                    dado3 = random.randrange(6)
+                    dado4 = random.randrange(6)
+                    dado5 = random.randrange(6)
+                    dado6 = random.randrange(6)
+                    dado7 = random.randrange(6)
+                    print("Sua soma de dados é", dado + dado2 + dado3 + dado4 + dado5 + dado6+dado7)
+        if mainp == "B":
+            print("Bem vindo a ferramenta para calcular dano! \n(OBS): Utilizamos o Sistema Próprio !")
+            mainb=input("Calcular qual tipo de dano:\n(A)Jutsu\n(B)Espada\n(C)TaiJutsu\n(D)Genjutsu\n->").upper()
+            if mainb == "A":
+                jutsu=eval(input('Diga o nível do seu jutsu ->'))
+                dado=eval(input("Quanto foi a soma dos seus dados ->"))
+                habilidade=eval(input("Qual o seu status de habilidade ->"))
+                skills=eval(input("Qual o seu status da skill ->"))
+                chakra=eval(input("Qual o nivel do seu Chakra ->"))
+                danobasicojutsu= (2*chakra)+skills+habilidade+dado+jutsu
+                print(danobasicojutsu)
+
+            if mainb == "B":
+                espada = eval(input("Nível da Espada ->"))
+                dado = eval(input("Quanto foi a soma dos seus dados ->"))
+                habilidade = eval(input("Qual o seu status de habilidade ->"))
+                skills = eval(input("Qual o seu status da skill ->"))
+                body = eval(input("Qual o nivel do seu Body ->"))
+                danobasicoespada = (2 * body) + skills + habilidade + dado + espada
+                print(danobasicoespada)
+
+            if mainb == "C":
+                dado = eval(input("Quanto foi a soma dos seus dados ->"))
+                habilidade = eval(input("Qual o seu status de habilidade ->"))
+                skills = eval(input("Qual o seu status da skill ->"))
+                body = eval(input("Qual o nivel do seu Body ->"))
+                danobasicobody = (2 * body) + skills + habilidade + dado
+                print(danobasicobody)
+
+            if mainb == "D":
+                genjutsu=eval(input("Diga o nivel do seu genjutsu ->"))
+                dado = eval(input("Quanto foi a soma dos seus dados ->"))
+                habilidade = eval(input("Qual o seu status de habilidade ->"))
+                skills = eval(input("Qual o seu status da skill ->"))
+                mind = eval(input("Qual o nivel do seu mind ->"))
+                danobasicogenjutsu = (2 * mind) + skills + habilidade + dado + genjutsu
+                print(danobasicogenjutsu)
+        if mainp == "C":
+            def reverse(s):
+                if s == '':
+                    return s
+                return s[-1] + reverse(s[:-1])
+            palavra = input('Diga uma palavra -->')
+            print(reverse(palavra))
+
+        if mainp == "D":
+            break
+    if começo == "NÃO":
+        break
